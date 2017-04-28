@@ -1,5 +1,4 @@
 <?php
-
     function get_db_config()
     {
         if (getenv('IS_IN_HEROKU')) {
