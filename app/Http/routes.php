@@ -10,7 +10,13 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+// the three is static page
+    Route::get('/','StaticPagesController@home')->name('home');
+    Route::get('/help','StaticPagesController@help')->name('help');
+    Route::get('/about','StaticPagesController@about')->name('about');
+//user  controller
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::get('signup','UsersController@create')->name('signup');
+
+
+
