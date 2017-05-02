@@ -13,6 +13,7 @@
         @yield('content')
         @include('layouts._footer')
       </div>
-    </div>    
+    </div> 
+    <script src="{{ asset('js/all.js') }}"></script>   
   </body>
 </html>
