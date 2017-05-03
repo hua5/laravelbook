@@ -65,8 +65,8 @@ class UsersController extends Controller
         ]);
        
        $this->sendEmailConfirmationTo($user);
-       session()->flash('success', '欢迎，您将在这里开启一段新的旅程~');
-        return redirect()->route('users.show', [$user]);
+        session()->flash('success', '验证邮件已发送到你的注册邮箱上，请注意查收。');
+        return redirect('/');
       
     }
 
