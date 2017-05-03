@@ -1,4 +1,4 @@
-//   @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+   @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 $navbar-color: #3c3e42;
 
 /* universal */
@@ -200,4 +200,8 @@ input {
     position: relative;
     right: 0;
   }
+}
+
+.alert-status {
+  @extend .alert-info;
 }
