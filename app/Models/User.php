@@ -39,5 +39,17 @@ class User extends Authenticatable
             $user->activation_token = str_random(30);
         });
     }
+
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
+    }  
+//取出围脖个数
+    public function feed()
+    {
+        return $this->statuses() ->orderBy('created_at', 'desc');
+                   
+    }
+
     
 }
