@@ -36,9 +36,16 @@
  Route::get('password/reset/{token}', 'Auth\PasswordController@getReset')->name('password.edit');
  Route::post('password/reset', 'Auth\PasswordController@postReset')->name('password.update');
 
-//statuses controller
+//statuses  weibo controller
 Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
-    
+
+//粉丝  关注者 路由
+ Route::get('/users/{id}/followings', 'UsersController@followings')->name('users.followings'); 
+ Route::get('/users/{id}/followers', 'UsersController@followers')->name('users.followers');   
+
+ //关注用户 和取消用户
+ Route::post('/users/followers/{id}', 'FollowersController@store')->name('followers.store');
+ Route::delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.destroy');
 
 
 
